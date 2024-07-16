@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 
+CSS Custom Property | variable
+*/
+:root{
+    --primary-color: #E02C6D;
+    --main-color: #3A3A3A;
+    --card-color: #18191F;
+    --paragraph-color: #787885;
+}
+
+/* 
+Common Style
+*/
+.display-flex{
+    display: flex;
+}
+
+.section-padding{
+    padding: 20px 50px;
+}
+
+.btn-primary{
+    padding: 10px 50px 10px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    position: relative;
+}
+
+.btn-primary i{
+    position: absolute;
+    top: 30%;
+    right: 20px;
+}
+
+/* 
+---------------------------------------- Navbar Section ----------------------------------
+*/
+.navbar{
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.navbar i{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.brand{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.menu-item,
+.cart-icon{
+    margin: 5px;
+    position: relative;
+}
+
+.cart-icon::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -3px;
+}
+
+.menu-link{
+    padding: 10px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+
+
+/* 
+-------------------------------------- Hero Section ---------------------------------------
+*/
+.hero-section{
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.hero-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.hero-content h1{
+    font-size: 2.8rem;
+    color: var(--main-color);
+}
+
+.hero-content p{
+    margin: 10px 0 20px;
+    max-width: 500px;
+    font-weight: 500;
+}
+
+.hero-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.hero-img img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
+/* 
+--------------------------------------------- Our clint Section ------------------------------------
+*/
+.our-clint-section{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.our-clint-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid rgba(192, 204, 218, 10%);
+    border-bottom: 2px solid rgba(192, 204, 218, 10%);
+}
