@@ -22,6 +22,8 @@ CSS Custom Property | variable
 /* 
 Common Style
 */
+
+
 .display-flex{
     display: flex;
 }
@@ -53,6 +55,10 @@ Common Style
     justify-content: space-between;
     max-width: 1440px;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
 }
 
 .navbar i{
@@ -63,6 +69,7 @@ Common Style
 
 .menu-icon{
     display: none;
+    margin: 10px 5px 5px;
 }
 
 .brand{
@@ -73,7 +80,7 @@ Common Style
 
 .menu-item,
 .cart-icon{
-    margin: 5px;
+    margin: 10px 5px 5px;
     position: relative;
 }
 
@@ -158,8 +165,13 @@ Common Style
     padding: 20px 0;
     border-top: 2px solid rgba(192, 204, 218, 10%);
     border-bottom: 2px solid rgba(192, 204, 218, 10%);
+    justify-content: center;
+    align-content: center;
 }
 
+.our-clint-container div > img{
+    width: 100%;
+}
 
 /* 
 ------------------------------------------- Product Section -------------------------------------
@@ -235,7 +247,21 @@ Common Style
     color: #787885;
 }
 
+.more-div{
+    margin-top: 30px;
+    text-align: end;
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+    padding-right: 30px;
+}
 
+.more-div i{
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
 
 /* 
 ---------------------------------------- Featured Section -------------------------------------
@@ -323,4 +349,141 @@ Common Style
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/* 
+-------------------------------------- Responsive -----------------------------------------------
+*/
+/* Small device */
+@media screen and (max-width: 576px){
+
+    /* navbar section */
+    .menu{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .brand{
+        font-size: 1rem;
+    }
+
+    .section-padding{
+        padding: 20px;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+
+    .hero-content p{
+        font-size: .8rem;
+    }
+
+    .hero-section,
+    .featured-section{
+        flex-direction: column-reverse;
+    }
+
+    .product-container{
+        grid-template-columns: 1fr;
+    }
+
+    .featured-content,
+    .featured-img,
+    .hero-content,
+    .hero-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .featured-section{
+        gap: 30px;
+    }
+
+    .featured-content h2{
+        font-size: 1.8rem;
+    }
+
+    .featured-content,
+    .hero-content{
+        align-items: center;
+    }
+
+    .our-clint-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .our-clint-container div > img{
+        width: 90%;
+    }
+}
+
+
+/* Medium device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+
+    /* navbar section */
+    .menu{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .section-padding{
+        padding: 20px 30px;
+    }
+
+
+    .hero-section,
+    .featured-section{
+        flex-direction: column-reverse;
+    }
+
+    .product-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .featured-content,
+    .featured-img{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-content{
+        width: 100%;
+    }
+
+    .hero-img{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .featured-section{
+        gap: 30px;
+    }
+
+    .featured-content{
+        align-items: center;
+    }
+
+    .our-clint-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+/* Laptop Screen */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .product-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
